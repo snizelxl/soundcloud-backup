@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+if [ ! -d "downloads" ]; then
+  mkdir downloads
+fi
+docker run --name "dl-soundcloud" --rm -v $(pwd)/downloads:/downloads soundcloud likes.sh $1
