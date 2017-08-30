@@ -2,4 +2,4 @@
 if [ ! -d "downloads" ]; then
   mkdir downloads
 fi
-docker run --name "dl-soundcloud" --rm -v $(pwd)/downloads:/downloads soundcloud likes.sh $1
+docker run --privileged=true --name "dl-soundcloud" --rm -v $(pwd)/downloads:/downloads soundcloud likes.sh $1
